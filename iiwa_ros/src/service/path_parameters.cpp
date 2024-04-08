@@ -48,7 +48,7 @@ bool PathParametersService::callService() {
         service_error_ = config_.response.error;
         ROS_ERROR_STREAM(service_name_ << " failed, Java error: " << service_error_);
       } else if (verbose_) {
-        ROS_INFO_STREAM(ros::this_node::getName() << ":" << service_name_ << " successfully called.");
+        ROS_INFO_STREAM(ros::this_node::getName() << ": " << service_name_ << " successfully called.");
       }
     } else if (verbose_) {
       ROS_ERROR_STREAM(service_name_ << " could not be called");
